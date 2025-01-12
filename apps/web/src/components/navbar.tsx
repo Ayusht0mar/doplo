@@ -11,7 +11,7 @@ const Navbar = () => {
                             fill
                         />
                 </div>
-                <a target="_blank" href="https://github.com/Ayusht0mar/doplo">
+                <a target="_blank" rel="noreferrer" href="https://github.com/Ayusht0mar/doplo">
                     <Github/>
                 </a>
         </div>
