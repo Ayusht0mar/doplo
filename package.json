@@ -16,7 +16,7 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-tailwind",
+  "name": "doplo",
   "packageManager": "npm@10.9.0",
   "workspaces": [
     "apps/*",
