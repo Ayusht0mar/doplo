@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CopyToClipboard from "../CopytoClipboard";
+import CopyToClipboard from "../copy-to-clipboard";
 ``
 const HeroArea = () => {
 
