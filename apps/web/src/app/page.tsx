@@ -1,5 +1,5 @@
-import HeroArea from "../components/home/HeroArea";
-import Navbar from "../components/home/Navbar";
+import HeroArea from "../components/home/hero-area";
+import Navbar from "../components/navbar";
 
 export default function Page(): JSX.Element {
   return (
