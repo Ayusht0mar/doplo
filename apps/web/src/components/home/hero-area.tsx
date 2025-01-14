@@ -5,7 +5,7 @@ const HeroArea = () => {
 
     return ( 
         <div>
-                <div className="flex flex-col w-[94vw] max-w-6xl mx-auto min-h-screen gap-8 bg-[#0C0C0C] rounded-3xl border border-[#171717] ">
+                <div className="flex flex-col w-[94vw] max-w-7xl mx-auto min-h-screen gap-8 bg-[#0C0C0C] rounded-3xl border border-[#171717] ">
                
                     <div className="pt-24 pl-12 space-y-4">
                         <h1 className="text-5xl font-bold">The Simplest UI Library</h1>
