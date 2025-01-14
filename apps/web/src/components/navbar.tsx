@@ -15,7 +15,7 @@ const Navbar = () => {
                         </div>
                         <h1 className="font-semibold">Doplo</h1>
                 </a>
-                <div className="flex space-x-4">
+                <div className="hidden md:flex space-x-4">
                     <Link href="/docs">Documentation</Link>
                     <Link href="/showcase">Showcase</Link>
                     <Link href="/roadmap">Roadmap</Link>
