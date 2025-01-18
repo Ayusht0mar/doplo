@@ -6,6 +6,7 @@ const ChangelogPage = () => {
         <div className="pt-12 lg:pt-24 px-4 lg:px-12 space-y-4">
             <h1 className="text-4xl font-bold">Changelog</h1>
             <p className="text-[#C0C0C0] text-balance">Get our latest updates and improvements by joining our newsletter.</p>
+            {/* To do: Make the collect email feature fuctionable */}
             <div className="flex flex-col md:flex-row  md:items-center gap-2">
                 <p className="gap-4 bg-zinc-900 w-fit py-1.5 px-3 text-zinc-100 rounded-md  min-w-full md:min-w-60">Enter your email</p>
                 <button className="text-zinc-900 bg-zinc-100 py-1.5 px-3 rounded-md font-semibold ">Subscribe</button>
