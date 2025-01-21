@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Email {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+
+model Feedback {
+  id        String   @id @default(cuid())
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model ComponentsRoadmap {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  status      Status @default(IN_REVIEW)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime?   @updatedAt
+}
+
+enum Status {
+  IN_REVIEW
+  IN_PROGRESS
+  COMPLETED
+  PUBLISHED
+}
