@@ -22,6 +22,9 @@ export default function RootLayout({
         <div className="absolute top-0 z-[-2] min-h-svh w-full bg-[#000000] bg-[radial-gradient(#ffffff20_1px,#000_1px)] bg-[size:20px_20px]"> 
           <Navbar/>
           {children}
+          <p className="text-center text-balance w-full my-6">
+                    Build by <a href="https://www.ayushtomar.in/">Ayush Tomar.</a> The source code is available on <a href="https://github.com/Ayusht0mar/doplo">Github.</a>
+          </p> 
         </div>
       </body>
     </html>
