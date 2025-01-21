@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@prisma/client": "^6.2.1",
     "@repo/ui": "*",
     "doplo": "*",
     "lucide-react": "^0.471.0",
