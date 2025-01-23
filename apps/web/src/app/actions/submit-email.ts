@@ -17,7 +17,6 @@ export async function submitEmail(formData: FormData) {
     })
     return { success: "Email submitted successfully" }
   } catch (error) {
-    console.error("Error submitting email:", error)
     return { error: "Failed to submit email" }
   }
 }

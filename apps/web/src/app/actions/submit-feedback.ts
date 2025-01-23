@@ -17,7 +17,6 @@ export async function submitFeedback(formData: FormData) {
     })
     return { success: "Feedback submitted successfully" }
   } catch (error) {
-    console.error("Error submitting feedback:", error)
     return { error: "Failed to submit feedback" }
   }
 }
