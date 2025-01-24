@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { submitEmail } from "../../app/actions/submit-email"
 import Input from "doplo/input"
 import Button from "doplo/button"
+import { submitEmail } from "../../app/actions/submit-email"
 
 export default function EmailCollector() {
   const [email, setEmail] = useState("")
@@ -19,21 +19,33 @@ export default function EmailCollector() {
     const result = await submitEmail(formData)
 
 
+    if (result.error) {
+      return
+      } else if (result.success) {
+        setEmail("")
+      }
     setIsSubmitting(false)
   }
 
   return (
-            <form onSubmit={handleSubmit} className="flex flex-col md:flex-row  md:items-center gap-2">
+            <form 
+              className="flex flex-col md:flex-row  md:items-center gap-2"
+              onSubmit={(e) => { void handleSubmit(e); }}  
+            >
                 <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="gap-4 bg-zinc-900 w-fit py-1.5 px-3 text-zinc-100 rounded-md  min-w-full md:min-w-60"
+                  className="gap-4 bg-zinc-900 w-fit py-1.5 px-3 text-zinc-100 rounded-md  min-w-full md:min-w-60"
+                  onChange={(e) => {setEmail(e.target.value)}}
+                  placeholder="Enter your email"
+                  required
+                  type="email"
+                  value={email}
                 />
-                <Button type="submit" className="text-zinc-900 bg-zinc-100 py-1.5 px-3 rounded-md font-semibold" disabled={isSubmitting}>
-                {isSubmitting ? "Subscribing..." : "Subscribe"}
+                <Button 
+                  className="text-zinc-900 bg-zinc-100 py-1.5 px-3 rounded-md font-semibold" 
+                  disabled={isSubmitting}
+                  type="submit"  
+                >
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
             </form>
   )
