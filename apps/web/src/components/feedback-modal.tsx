@@ -48,7 +48,7 @@ function FeedbackModal(): JSX.Element {
 
                         <form className="flex flex-col gap-4" onSubmit={(e) => { void handleSubmit(e); }} >
                         <Textarea
-                                className="p-2 bg-zinc-900"
+                                className="p-2 bg-zinc-900 text-zinc-100"
                                 onChange={(e) => {setMessage(e.target.value)}}
                                 placeholder="Your feedback"
                                 required
