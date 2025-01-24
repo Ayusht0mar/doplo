@@ -1,17 +1,21 @@
 import FeedbackModal from "../../components/feedback-modal";
 import { db } from "../../lib/db";
 
+type RoadmapItem = {
+    title: string;
+  };
+
 const RoadmapPage = async () => {
-  const inReview = await db.componentsRoadmap.findMany({
+  const inReview: RoadmapItem[] = await db.componentsRoadmap.findMany({
     where: { status: "IN_REVIEW" },
   });
-  const inProgress = await db.componentsRoadmap.findMany({
+  const inProgress: RoadmapItem[] = await db.componentsRoadmap.findMany({
     where: { status: "IN_PROGRESS" },
   });
-  const completed = await db.componentsRoadmap.findMany({
+  const completed: RoadmapItem[] = await db.componentsRoadmap.findMany({
     where: { status: "COMPLETED" },
   });
-  const published = await db.componentsRoadmap.findMany({
+  const published: RoadmapItem[] = await db.componentsRoadmap.findMany({
     where: { status: "PUBLISHED" },
   });
 
@@ -32,7 +36,7 @@ const RoadmapPage = async () => {
               In Review
             </h2>
             <ul className="mt-4 space-y-2">
-              {inReview.map((item) => (
+              {inReview.map((item: RoadmapItem) => (
                 <li
                   key={item.title}
                   className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold"
@@ -49,7 +53,7 @@ const RoadmapPage = async () => {
               In Progress
             </h2>
             <ul className="mt-4 space-y-2">
-              {inProgress.map((item) => (
+              {inProgress.map((item: RoadmapItem) => (
                 <li
                   key={item.title}
                   className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold"
@@ -66,7 +70,7 @@ const RoadmapPage = async () => {
               Completed
             </h2>
             <ul className="mt-4 space-y-2">
-              {completed.map((item) => (
+              {completed.map((item: RoadmapItem) => (
                 <li
                   key={item.title}
                   className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold"
@@ -83,7 +87,7 @@ const RoadmapPage = async () => {
               Published
             </h2>
             <ul className="mt-4 space-y-2">
-              {published.map((item) => (
+              {published.map((item: RoadmapItem) => (
                 <li
                   key={item.title}
                   className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold"
