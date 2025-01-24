@@ -44,6 +44,9 @@ module.exports = {
   rules: {
     "import/no-default-export": "off",
     "@typescript-eslint/no-unnecessary-condition": "off",
-    "@typescript-eslint/no-useless-template-literals": "off"
+    "@typescript-eslint/no-useless-template-literals": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    " @typescript-eslint/no-unsafe-assignment": "off",
   },
 };
