@@ -29,7 +29,7 @@ const RoadmapPage = async () => {
           build faster and on your own terms.
         </p>
         <FeedbackModal />
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           {/* In Review */}
           <div className="flex flex-col border border-[#202020] p-4 h-[400px] overflow-y-scroll no-scrollbar">
             <h2 className="text-orange-600 font-semibold bg-orange-600/10 border border-orange-600 py-1 px-2 w-fit rounded text-sm">
