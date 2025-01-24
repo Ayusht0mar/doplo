@@ -1,8 +1,7 @@
 "use server"
 
-import { PrismaClient } from "@prisma/client"
+import { db } from "../../lib/db"
 
-const prisma = new PrismaClient()
 
 export async function submitEmail(formData: FormData) {
   const email = formData.get("email") as string
@@ -12,7 +11,7 @@ export async function submitEmail(formData: FormData) {
   }
 
   try {
-    await prisma.email.create({
+    await db.email.create({
       data: { email },
     })
     return { success: "Email submitted successfully" }
