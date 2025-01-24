@@ -21,26 +21,12 @@ const RoadmapPage = () => {
                                 ).then(
                                     (component) => (
                                         component.map((item) => (
-                                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
+                                        <li key={item.title} className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
                                             <p>{item.title}</p>
                                         </li>
                                     )
                                 )    
                                 ))}
-
-                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
-                            Forms
-                        </li>
-
-                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
-                            Tables
-                        </li>
-                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
-                            Dialog
-                        </li>
-                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
-                            Pagination
-                        </li>
                     </ul>
                 </div>
                 <div className="border border-[#202020] p-4 h-[400px] overflow-y-scroll no-scrollbar">
@@ -51,7 +37,7 @@ const RoadmapPage = () => {
                                 ).then(
                                     (component) => (
                                         component.map((item) => (
-                                        <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
+                                        <li key={item.title} className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
                                             <p>{item.title}</p>
                                         </li>
                                     )
@@ -67,7 +53,7 @@ const RoadmapPage = () => {
                         ).then(
                             (component) => (
                                 component.map((item) => (
-                                <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
+                                <li key={item.title} className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
                                     <p>{item.title}</p>
                                 </li>
                             )
@@ -83,7 +69,7 @@ const RoadmapPage = () => {
                         ).then(
                             (component) => (
                             component.map((item) => (
-                                <li className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
+                                <li key={item.title} className="bg-[#1A1A1A] rounded py-2 px-3 font-semibold">
                                     <p>{item.title}</p>
                                 </li>
                             )
