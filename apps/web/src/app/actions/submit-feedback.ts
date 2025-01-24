@@ -1,18 +1,22 @@
 "use server"
 
-import { PrismaClient } from "@prisma/client"
+import { db } from "../../lib/db"
 
-const prisma = new PrismaClient()
+
 
 export async function submitFeedback(formData: FormData) {
   const message = formData.get("message") as string
+
+  if (typeof message !== "string" || message.trim() === "") {
+    return { error: "Email is required and must be a valid string" };
+  }
 
   if (!message) {
     return { error: "Email and message are required" }
   }
 
   try {
-    await prisma.feedback.create({
+    await db.feedback.create({
       data: { message },
     })
     return { success: "Feedback submitted successfully" }

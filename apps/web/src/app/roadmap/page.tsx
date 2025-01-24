@@ -1,7 +1,7 @@
 import FeedbackModal from "../../components/feedback-modal";
 import { db } from "../../lib/db";
 
-type RoadmapItem = {
+interface RoadmapItem {
     title: string;
   };
 
