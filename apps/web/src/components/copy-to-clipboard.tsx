@@ -1,32 +1,27 @@
 "use client"
 
-import { CheckCheck, Copy } from 'lucide-react';
-import { useState } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import React, { useState, useCallback } from "react"
+import { Copy, Check } from "lucide-react"
 
-interface CopyToClipboardComponentProps {
-  textToCopy: string;
+interface CopyButtonProps {
+  textToCopy: string
 }
 
-const CopyToClipboardComponent: React.FC<CopyToClipboardComponentProps> = ({ textToCopy }) => {
-  const [copied, setCopied] = useState(false);
+export default function CopyButton({ textToCopy }: CopyButtonProps) {
+  const [isCopied, setIsCopied] = useState(false)
 
-  const handleCopy = () => {
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
+  const copyToClipboard = useCallback(() => {
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 3000)
+    })
+  }, [textToCopy])
 
   return (
-    <div>
-      <CopyToClipboard text={textToCopy} onCopy={handleCopy}>
-        <div className='my-auto h-4'>
-            <button>{copied ? <CheckCheck size={16}/>  : <Copy size={16}/>}</button>
-        </div>
-      </CopyToClipboard>
-    </div>
-  );
-};
+    <button onClick={copyToClipboard} >
+      {isCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+      <span className="sr-only">{isCopied ? "Copied" : "Copy to clipboard"}</span>
+    </button>
+  )
+}
 
-export default CopyToClipboardComponent;
