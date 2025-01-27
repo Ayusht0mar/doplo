@@ -1,28 +1,30 @@
 {
   "name": "doplo",
-  "version": "0.0.0",
+  "description": "This simplest react component library",
+  "version": "0.1.18",
   "sideEffects": [
     "**/*.css"
   ],
   "files": [
-    "dist"
+    "dist/**"
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./button": "./src/components/button.tsx",
-    "./card": "./src/components/card.tsx",
-    "./input": "./src/components/input.tsx",
-    "./textarea": "./src/components/textarea.tsx"
+    "./button": "./dist/components/button.js",
+    "./card": "./dist/components/card.js",
+    "./input": "./dist/components/input.js",
+    "./textarea": "./dist/components/textarea.js",
+    ".": "./dist/index.js"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "build": "tsup src/index.tsx src/components/*.tsx --format cjs,esm --dts",
     "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev": "tsup src/index.tsx src/components/*.tsx  --format cjs,esm --dts --watch",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">=16.8.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -32,10 +34,20 @@
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
+    "tsup": "^8.3.5",
     "typescript": "5.5.4"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": ["UI library", "Component library", "React components"],
+  "author": "Ayush Tomar",
+  "homepage": "https://doplo.ayushtomar.in/",
+  "repository": {
+    "url": "https://github.com/Ayusht0mar/doplo"
   }
 }
