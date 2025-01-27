@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.2.1",
-    "@repo/ui": "*",
-    "doplo": "*",
+    "doplo": "^0.1.18",
     "lucide-react": "^0.471.0",
     "motion": "^11.18.1",
     "next": "^14.2.3",
