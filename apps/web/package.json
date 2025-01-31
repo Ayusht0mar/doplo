@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@prisma/client": "^6.2.1",
+    "@vercel/analytics": "^1.4.1",
     "doplo": "^0.1.18",
     "lucide-react": "^0.471.0",
     "motion": "^11.18.1",
