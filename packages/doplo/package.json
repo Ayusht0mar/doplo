@@ -1,7 +1,7 @@
 {
   "name": "doplo",
-  "description": "This simplest react component library",
-  "version": "0.1.18",
+  "description": "The library for react user interfaces.",
+  "version": "0.1.23",
   "sideEffects": [
     "**/*.css"
   ],
@@ -10,8 +10,11 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
+    "./avatar": "./dist/components/avatar.js",
+    "./badge": "./dist/components/badge.js",
     "./button": "./dist/components/button.js",
     "./card": "./dist/components/card.js",
+    "./dialog": "./dist/components/dialog.js",
     "./input": "./dist/components/input.js",
     "./textarea": "./dist/components/textarea.js",
     ".": "./dist/index.js"
@@ -44,7 +47,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "keywords": ["UI library", "Component library", "React components"],
+  "keywords": ["UI library", "Component library", "React components", "Doplo", "React UI Library", "Frontend Library", "components", "ui", "tailwind"],
   "author": "Ayush Tomar",
   "homepage": "https://doplo.ayushtomar.in/",
   "repository": {
