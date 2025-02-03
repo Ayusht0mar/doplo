@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>
         <div className="absolute top-0 z-[-2] min-h-svh w-full bg-[#000000] bg-[radial-gradient(#ffffff20_1px,#000_1px)] bg-[size:20px_20px]"> 
           <Navbar/>
