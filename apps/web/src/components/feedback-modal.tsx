@@ -1,9 +1,9 @@
 "use client";
 
-import Button from "doplo/button";
 import { useState } from "react";
-import Textarea from "doplo/textarea";
 import { submitFeedback } from "../app/actions/submit-feedback";
+import { Button } from "doplo/button";
+import { Textarea } from "doplo/textarea";
 
 function FeedbackModal(): JSX.Element {
     const [open, setIsOpen] = useState(false);
@@ -51,7 +51,6 @@ function FeedbackModal(): JSX.Element {
                                 className="p-2 bg-zinc-900 text-zinc-100"
                                 onChange={(e) => {setMessage(e.target.value)}}
                                 placeholder="Your feedback"
-                                required
                                 rows={4}
                                 value={message}
                             />
