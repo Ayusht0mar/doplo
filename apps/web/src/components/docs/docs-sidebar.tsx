@@ -1,7 +1,7 @@
 "use client"
+import clsx from "clsx";
 import Link from "next/link";
 import { usePathname} from "next/navigation";
-import clsx from "clsx";
 
 const links = [
     {name: "Introduction", section: "Get Started", href: "/docs"},
