@@ -23,9 +23,9 @@ const Navbar = () => {
                     <Link href="/roadmap">Roadmap</Link>
                     <Link href="/changelog">Changelog</Link>                    
                 </div>
-                <div className="w-full flex justify-end gap-2">
+                <div className="w-full flex justify-end items-center gap-2">
                     <a target="_blank" rel="noreferrer" href="https://x.com/doplo_ui">
-                        <Image src="/xlogo.svg" alt="X Logo" width={20} height={20}/>
+                        <Image src="/xlogo.svg" alt="X Logo" width={18} height={18}/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://github.com/Ayusht0mar/doplo" >
                         <Github size={20}/>
