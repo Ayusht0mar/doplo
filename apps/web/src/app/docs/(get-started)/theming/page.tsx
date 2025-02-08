@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const ThemingPage = () => {
     return ( 
            <div className="text-neutral-400">
