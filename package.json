@@ -21,8 +21,5 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
-  "dependencies": {
-    "doplo": "^0.1.18"
-  }
+  ]
 }
