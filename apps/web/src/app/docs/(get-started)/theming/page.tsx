@@ -7,7 +7,8 @@ const ThemingPage = () => {
                            <p>Use theme according to your need.</p>
 
                             <br />
-                            <div>
+                            <p>You can use the <a href="https://github.com/pacocoursey/next-themes" className="text-blue-500">next-themes</a> package to toggle between themes.</p>
+                            {/* <div>
                                 <h2>If you are using only one theme</h2>
                                 <br />
                                 <p>For light theme:</p>
@@ -24,7 +25,7 @@ const ThemingPage = () => {
                                 <h2>If you are using both themes</h2>
                                 <p>Use next-themes to toggle between themes</p>
 
-                            </div>
+                            </div> */}
                 </div>
      );
 }
