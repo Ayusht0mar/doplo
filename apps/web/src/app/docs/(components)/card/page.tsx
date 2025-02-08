@@ -18,7 +18,7 @@ const CardPage = () => {
                         <CardDescription > Description </CardDescription>
                     </CardHeader>
                     <CardBody className="flex flex-col gap-2">
-                            <Input type="email" placeholder="Input" className="w-full"/>
+                            <Input type="email" placeholder="Email" className="w-full"/>
                             <Textarea placeholder="Textarea" className="w-full"/>
                     </CardBody>
                     <CardFooter>
