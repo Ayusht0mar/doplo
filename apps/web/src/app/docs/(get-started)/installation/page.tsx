@@ -13,15 +13,9 @@ const InstallationPage = () => {
                     </div>
                     <br />
                     <p>
-                        We use tailwind for styling. So you need to add doplo path in tailwind config file.
+                        Import the styles in your layout file.
                     </p>
-                    <br />
-                    <div className="flex gap-4 items-center">
-                        <p>{"../../node_modules/doplo/**/*.{js,ts,jsx,tsx,mdx}"}</p>
-                        <CopyButton textToCopy='"../../node_modules/doplo/**/*.{js,ts,jsx,tsx,mdx}"'/>
-                    </div>
-                    <Image src="/docs/path-img.svg" alt="Path Image" width={500} height={300}/>
-                    <br />
+                    <Image src="/docs/import-css.svg" alt="Import CSS" width={500} height={300}/>
                     And with that you can use the <a href="badge">components</a> in your application.
         </div>
      );
