@@ -25,7 +25,7 @@ export default function RootLayout({
             {children}
             <Analytics/>
             <p className="text-center text-balance w-full my-6">
-                      Build by <a href="https://www.ayushtomar.in/">Ayush Tomar.</a> The source code is available on <a href="https://github.com/Ayusht0mar/doplo">Github.</a>
+                      Build by <a href="https://dub.sh/ayushtomar">Ayush Tomar.</a> The source code is available on <a href="https://git.new/doplo">Github.</a>
             </p> 
           </div>
       </body>
