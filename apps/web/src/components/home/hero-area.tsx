@@ -11,7 +11,7 @@ function HeroArea () {
                     <div className="space-y-4">
                         <p className="uppercase text-xs leading-none bg-black border w-fit py-1.5 px-3 rounded-full text-[#C0C0C0] border-zinc-800">React Components</p>
                         <h1 className="text-4xl md:text-5xl font-bold text-balance">The Library for React User Interfaces</h1>
-                        <p className="text-[#C0C0C0] text-balance">Install doplo and get the UI components with basic design. Customize the style according to you need. Save time to build UI and focus on the core functionality of you app.</p>
+                        <p className="text-[#C0C0C0] text-balance">Install doplo and get the UI components with basic design. Customize the style according to you need. Save time of building components and focus on the core of your app.</p>
                         <div className="flex flex-col md:flex-row gap-4">
                             <div className="flex items-center gap-4 bg-zinc-900 w-fit py-1.5 px-3 text-zinc-100 rounded-md">
                                 <p>npm install doplo</p>
@@ -29,9 +29,9 @@ function HeroArea () {
                         </div> */}
                     </div>
                 </div>  
-                <div className="flex flex-col md:flex-row  gap-12 border-t border-t-[#171717] mt-20 pt-20">
-                    <h3 className=" text-nowrap text-2xl font-semibold">Never Start from Zero</h3>
-                    <div className="flex flex-col md:flex-row w-full">
+                <div className="flex flex-col gap-12 border-t border-t-[#171717] mt-20 pt-20">
+                    <h3 className=" text-nowrap text-2xl font-semibold text-center">Never Start from Zero</h3>
+                    <div className="flex flex-col md:flex-row items-center w-full">
                         <div className="border border-[#232323] rounded-2xl p-4">
                             <p className="mb-4 text-center text-[#C0C0C0]">Start with our components</p>
                             <div className="relative w-full ">
@@ -43,7 +43,7 @@ function HeroArea () {
                                 />
                             </div>
                         </div>
-                        <div className="h-full flex items-center justify-center rotate-90 md:rotate-0">
+                        <div className="h-full flex items-center justify-center rotate-90">
                             <ArrowRight className="text-neutral-600" size={48} />
                         </div>
                         <div className=" border border-[#232323] rounded-2xl p-4" >
