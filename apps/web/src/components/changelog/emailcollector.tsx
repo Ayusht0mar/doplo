@@ -30,7 +30,7 @@ export default function EmailCollector() {
 
   return (
             <form 
-              className="flex flex-col md:flex-row  md:items-center gap-2"
+              className="flex flex-col md:flex-row gap-2"
               onSubmit={(e) => { void handleSubmit(e); }}  
             >
                 <Input
@@ -38,6 +38,7 @@ export default function EmailCollector() {
                   placeholder="Enter your email"
                   type="email"
                   value={email}
+                  className="w-full max-w-80"
                 />
                 <Button 
                   disabled={isSubmitting}
